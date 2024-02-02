@@ -1,0 +1,28 @@
+/* Body font family and black background*/
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+}
+/* Responsive header (h1) */
+#header_container h1{
+  font-size: clamp(2rem, 10vw, 7vw);
+  line-height: 100%;
+  color: white;
+}
+/* Responsive header (h1) */
+#header_container h2{
+  font-size: clamp(1.5rem, 10vw, 3vw);
+  color: grey;
+}
+
+/* header_container text align (h1 + h2) */
+#header_container :is(h1, h2){
+  text-align: center;
+}
+/* header button: font style */
+.header_buttons a{
+  font-size: clamp(1rem, 10vw, 1vw);
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
