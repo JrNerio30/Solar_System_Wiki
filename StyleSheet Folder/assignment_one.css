@@ -1,0 +1,153 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+header#header_container{
+  height: 100vh;
+}
+/* Center Header_Container */
+#header_container{
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  flex-direction: column;
+}
+
+/* Header Container Fonts Display */
+#header_container h1{
+  font-size: clamp(2rem, 10vw, 7vw);
+  line-height: 100%;
+  color: white;
+}
+/* Responsive header (h1) */
+#header_container h2{
+  font-size: clamp(1.5rem, 10vw, 3vw);
+  color: grey;
+}
+
+/* header_container text align (h1 + h2) */
+#header_container :is(h1, h2){
+  text-align: center;
+}
+
+/* header_container spacing */
+#header_container h1:has(+ h2 ){
+  margin: 0 0 1rem 0 ;
+}
+
+
+
+/* header_buttons: display */
+.header_button{
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row-reverse wrap-reverse;
+  margin-top: 20px;
+}
+/* Font Dsiplay */
+.header_button{
+  font-size: clamp(1rem, 10vw, 1vw);
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+/* header button: Style */
+.header_button {
+  padding: 15px 50px;
+  border: 2px solid rgba(209, 213, 219, 0.3);
+  border-radius: 50px;
+  transition: all 200ms;
+}
+/* header button: hover */
+.header_button:hover{
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 1);
+  
+}
+
+/* header button: active */
+.header_button:active{
+  scale: 0.9;
+}
+
+@media only screen and (max-width: 768px) {
+  #header_container :is(h1, h2){
+    margin-inline: 15px;
+  }
+}
+
+/* Main_Grid_Container Display */
+main#main_container{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px;
+}
+
+#main_container ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+
+#main_container li{
+  list-style: none;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 1);
+  margin: 30px 30px;
+  background-color: white;
+  border-radius: 20px;
+  transition: all 400ms;
+}
+
+#main_container li:hover{
+  -webkit-box-shadow: 0px 0px 30px 2px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 30px 2px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 30px 2px rgba(255, 255, 255, 1);
+  scale: 1.05;
+}
+
+
+
+
+#main_container img{
+  border-radius: 20px 20px 0px 0px;
+  border-bottom: grey 5px solid;
+}
+/* Small phones like iPhone X */
+@media screen and (max-width: 300px) {
+  #main_container img{
+    width: 230px;
+  }
+}
+/* Large Phones like Pxiel 1 and iPhone 8 */
+@media screen and (min-width: 300px) {
+  #main_container img{
+    width: 290px;
+  }
+}
+
+
+
+
+
